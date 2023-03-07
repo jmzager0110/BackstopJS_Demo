@@ -1,0 +1,75 @@
+{
+  "id": "backstop_default",
+  "viewports": [
+    {
+      "label": "phone",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "tablet",
+      "width": 1024,
+      "height": 768
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Applitools Demo Page",
+      "url": "https://demo.applitools.com/index_v2.html",
+      "referenceUrl": "https://demo.applitools.com/index.html#",
+      "delay": 0,
+      "postInteractionWait": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Applitools Selector Example-Icons",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://demo.applitools.com/index_v2.html",
+      "referenceUrl": "https://demo.applitools.com/index.html#",
+      "delay": 0,
+      "postInteractionWait": 0,
+      "selectors": [".logo-w", ".pre-icon.os-icon.os-icon-user-male-circle", ".pre-icon.os-icon.os-icon-fingerprint"],
+      "selectorExpansion": true,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Applitools Selector Example-Inputs",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://demo.applitools.com/index_v2.html",
+      "referenceUrl": "https://demo.applitools.com/index.html#",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [".form-group"],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
