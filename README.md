@@ -2,8 +2,9 @@
 This is my practice project for BackstopJS
 
 Directories include:
-- applitools_simple This test will have failures and successes as the two environemtns tested against each other have intentional differences
-- TBD
+- applitools_simple This test will have failures and successes as the two environments tested against each other have intentional differences
+- scenarios This is to split up the lengthy json configuration into separate js files
+- 
 - TBD
 
 ### Installation
@@ -199,3 +200,6 @@ viewports                // An array of screen size objects your DOM will be tes
 ### Additional documentation
 
 https://github.com/garris/BackstopJS
+
+https://github.com/marcdacz/visual-testing-backstopjs
+
