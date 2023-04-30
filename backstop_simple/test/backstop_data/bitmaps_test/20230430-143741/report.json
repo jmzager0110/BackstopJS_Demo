@@ -1,4 +1,4 @@
-report({
+{
   "testSuite": "BackstopJS",
   "tests": [
     {
@@ -36,4 +36,4 @@ report({
     }
   ],
   "id": "Backstop Simple"
-});
+}

@@ -1,9 +1,10 @@
 {
-  "label": "Test One",
-  "url": "https://www.google.com",
+  "label": "Test Two",
+  "url": "https://www.test.com",
   "delay": 2000,
   "postInteractionWait": 5000,
   "selectorExpansion": true,
+  "selectors": [""],
   "misMatchThreshold": 1.0,
   "requireSameDimensions": false
 }
