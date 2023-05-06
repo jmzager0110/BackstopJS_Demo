@@ -2,7 +2,7 @@
   "scenarios": [
     {
       "label": "UltimateQA-Elements Page-Raise button",
-      "url": "https://garris.github.io/BackstopJS/",
+      "url": "https://ultimateqa.com/simple-html-elements-for-automation/",
       "delay": 1000,
       "removeSelectors": ["#header-sec"],
       "postInteractionWait": 1000,
@@ -13,7 +13,7 @@
     },
     {
       "label": "UltimateQA-Elements Page-Email Me button",
-      "url": "https://garris.github.io/BackstopJS/",
+      "url": "https://ultimateqa.com/simple-html-elements-for-automation/",
       "delay": 1000,
       "removeSelectors": ["#header-sec"],
       "clickSelector": ".et_pb_contact_submit et_pb_button",
@@ -25,7 +25,7 @@
     },
     {
       "label": "UltimateQA-Elements Page-Dropdown",
-      "url": "https://garris.github.io/BackstopJS/",
+      "url": "https://ultimateqa.com/simple-html-elements-for-automation/",
       "delay": 1000,
       "clickSelector": ".et_pb_blurb_description",
       "postInteractionWait": 1000,

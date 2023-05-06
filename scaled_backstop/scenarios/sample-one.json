@@ -19,6 +19,38 @@
       "selectorExpansion": true,
       "misMatchThreshold": 0.1,
       "requireSameDimensions": true
+    },
+    {
+      "label": "UltimateQA - Section of buttons-LoginForm",
+      "url": "https://ultimateqa.com/complicated-page",
+      "delay": 1000,
+      "postInteractionWait": 1000,
+      "selectors": [".et_pb_module et_pb_login et_pb_login_0 et_pb_newsletter clearfix  et_pb_text_align_left et_pb_bg_layout_dark"],
+      "selectorExpansion": true,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "UltimateQA - Section of buttons-ToggleForm",
+      "url": "https://ultimateqa.com/complicated-page",
+      "delay": 1000,
+      "clickSelectors": [".et_pb_toggle_title"],
+      "postInteractionWait": 1000,
+      "selectors": [""],
+      "selectorExpansion": true,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "UltimateQA - Section of buttons-TwitterButton",
+      "url": "https://ultimateqa.com/complicated-page",
+      "delay": 1000,
+      "clickSelectors": [""],
+      "postInteractionWait": 1000,
+      "selectors": [".icon et_pb_with_border"],
+      "selectorExpansion": true,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
     }
   ]
 }

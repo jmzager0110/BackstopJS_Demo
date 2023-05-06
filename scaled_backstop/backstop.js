@@ -33,28 +33,32 @@
     //.then((json) => console.log(json));
 //error message, "ReferenceError: fetch is not defined
 
-//var fs = require ('fs');
-//var allScenarios = [];
+var fs = require ('fs');
+var allScenarios = [];
 
-//function loadScenarios (dirname, onError) {
-    //var files = fs.readdirSync(dirname);
-    //console.log(dirname);
-    //files.forEach (function (file) {
-        //content = fs.readFileSync(dirname + file, 'utf-8');
-        //allScenarios.push(JSON.parse(content));
-        //console.log("content");
-    //})
-//}
+function loadScenarios (dirname, onError) {
+    var files = fs.readdirSync(dirname);
+    console.log(dirname);
+    files.forEach (function (file) {
+        content = fs.readFileSync(dirname + file, 'utf-8');
+        allScenarios.push(JSON.parse(content));
+        console.log("content");
+    })
+}
 
-//loadScenarios ('scenarios/',
-    //function (err) {
-    //throw err
-    //}
-//)
-//Lines 36-53: THIS RUNS BACKSTOP, But only selects 3 scenarios, is it from one file or reading each file as a scenario?
+loadScenarios ('scenarios/',
+    function (err) {
+    throw err
+    }
+)
+//Lines 36-53: THIS RUNS BACKSTOP, But only selects 3 scenarios, it is reading each file as a scenario
 //Error thrown TypeError: Cannot read property 'replace' of undefined
-//TODO: Try to determine if the 3 scenarios selected to run are within one file or if Backstop is reading each file as ascenario
-//TODO: If Backstop is reading each file as a scenario, try iterating through the "scenarios" objects, multiple
+//     at Object.makeSafe (C:\Users\Jessica\AppData\Roaming\npm\node_modules\backstopjs\core\util\engineTools.js:48:14)
+//     at module.exports (C:\Users\Jessica\AppData\Roaming\npm\node_modules\backstopjs\core\util\runPuppet.js:28:41)
+//     at C:\Users\Jessica\AppData\Roaming\npm\node_modules\backstopjs\node_modules\p-map\index.js:57:28
+//     at processTicksAndRejections (internal/process/task_queues.js:95:5)
+
+//TODO: Backstop is reading each file as a scenario, try iterating through the "scenarios" objects, multiple?
 //TODO: Can several json files declare the same object?
 
 module.exports = {
