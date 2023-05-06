@@ -53,8 +53,9 @@
 //)
 //Lines 36-53: THIS RUNS BACKSTOP, But only selects 3 scenarios, is it from one file or reading each file as a scenario?
 //Error thrown TypeError: Cannot read property 'replace' of undefined
-
-
+//TODO: Try to determine if the 3 scenarios selected to run are within one file or if Backstop is reading each file as ascenario
+//TODO: If Backstop is reading each file as a scenario, try iterating through the "scenarios" objects, multiple
+//TODO: Can several json files declare the same object?
 
 module.exports = {
     "id": "Scaled_Backstop",
