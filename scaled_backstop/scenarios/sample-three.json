@@ -1,0 +1,38 @@
+{
+  "scenarios": [
+    {
+      "label": "UltimateQA-Elements Page-Raise button",
+      "url": "https://garris.github.io/BackstopJS/",
+      "delay": 1000,
+      "removeSelectors": ["#header-sec"],
+      "postInteractionWait": 1000,
+      "selectors": ["#button2"],
+      "selectorExpansion": false,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "UltimateQA-Elements Page-Email Me button",
+      "url": "https://garris.github.io/BackstopJS/",
+      "delay": 1000,
+      "removeSelectors": ["#header-sec"],
+      "clickSelector": ".et_pb_contact_submit et_pb_button",
+      "postInteractionWait": 1000,
+      "selectors": [],
+      "selectorExpansion": false,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "UltimateQA-Elements Page-Dropdown",
+      "url": "https://garris.github.io/BackstopJS/",
+      "delay": 1000,
+      "clickSelector": ".et_pb_blurb_description",
+      "postInteractionWait": 1000,
+      "selectors": [],
+      "selectorExpansion": true,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    }
+  ]
+}

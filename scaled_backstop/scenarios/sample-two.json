@@ -1,0 +1,36 @@
+{
+  "scenarios": [
+    {
+      "label": "UtlimateQA-Fake Landing Page-Full Page",
+      "url": "https://ultimateqa.com/fake-landing-page",
+      "delay": 1000,
+      "removeSelectors": ["#header-sec"],
+      "postInteractionWait": 1000,
+      "selectorExpansion": true,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "UtlimateQA-Fake Landing Page-First Section Image",
+      "url": "https://ultimateqa.com/fake-landing-page",
+      "delay": 1000,
+      "removeSelectors": ["#header-sec"],
+      "postInteractionWait": 0,
+      "selectors": [".et_pb_image_wrap"],
+      "selectorExpansion": true,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "UtlimateQA-Fake Landing Page-Courses Button",
+      "url": "https://ultimateqa.com/fake-landing-page",
+      "delay": 1000,
+      "removeSelectors": ["#header-sec"],
+      "postInteractionWait": 0,
+      "selectors": [".et_pb_button.et_pb_button_1.et_hover_enabled.et_pb_bg_layout_light"],
+      "selectorExpansion": true,
+      "misMatchThreshold": 0.1,
+      "requireSameDimensions": true
+    }
+  ]
+}

@@ -1,9 +1,37 @@
-//const scenarios = require("/scenarios/");
+//const scenarios = require("./scenarios");
 //fetch ("/scenarios/*").then(function(response){
     //response.json().then(function(json) {
         //let scenarios = json;
         //})
     //})
+//Error: Cannot find module './scenarios'
+
+//import data from './scenarios' assert {type: 'JSON'};
+//console.log(data);
+//SyntaxError: Cannot use import statement outside a module
+
+//let fetch = import('node-fetch');
+//let response = fetch('./scenarios');
+//let data = response.json();
+    //console.log(response.json);
+//TypeError: fetch is not a function
+
+//const allScenarios = fetch("./scenarios")
+    //.then(function (response){
+    //return response.json();
+    //})
+    //.then(function (data) {
+    //for (let i=0; i<data.length; i++) {
+    //console.log(data[i]);
+    //}
+    //})
+//error message, "ReferenceError: fetch is not defined
+
+
+//fetch('./scenarios')
+    //.then((response) => response.json())
+    //.then((json) => console.log(json));
+//error message, "ReferenceError: fetch is not defined
 
 //var fs = require ('fs');
 //var allScenarios = [];
@@ -16,29 +44,17 @@
         //allScenarios.push(JSON.parse(content));
         //console.log("content");
     //})
-//})
+//}
 
 //loadScenarios ('scenarios/',
     //function (err) {
     //throw err
     //}
 //)
+//Lines 36-53: THIS RUNS BACKSTOP, But only selects 3 scenarios, is it from one file or reading each file as a scenario?
+//Error thrown TypeError: Cannot read property 'replace' of undefined
 
-//import data from './scenarios' assert {type: 'JSON'};
 
-//let fetch = import('node-fetch');
-//let response = fetch('./scenarios');
-//let data = response.json();
-
-let allScenarios = fetch("./scenarios")
-    .then(function (response){
-    return response.json();
-    })
-    .then(function (data) {
-    for (let i=0; i<data.length; i++) {
-    console.log(data[i]);
-    }
-    })
 
 module.exports = {
     "id": "Scaled_Backstop",
