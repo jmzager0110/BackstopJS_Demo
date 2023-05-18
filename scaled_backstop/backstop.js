@@ -33,24 +33,24 @@
     //.then((json) => console.log(json));
 //error message, "ReferenceError: fetch is not defined
 
-var fs = require ('fs');
-var allScenarios = [];
+//var fs = require ('fs');
+//var allScenarios = [];
 
-function loadScenarios (dirname, onError) {
-    var files = fs.readdirSync(dirname);
-    console.log(dirname);
-    files.forEach (function (file) {
-        content = fs.readFileSync(dirname + file, 'utf-8');
-        allScenarios.push(JSON.parse(content));
-        console.log("content");
-    })
-}
+//function loadScenarios (dirname, onError) {
+    //var files = fs.readdirSync(dirname);
+    //console.log(dirname);
+    //files.forEach (function (file) {
+        //content = fs.readFileSync(dirname + file, 'utf-8');
+        //allScenarios.push(JSON.parse(content));
+        //console.log("content");
+    //})
+//}
 
-loadScenarios ('scenarios/',
-    function (err) {
-    throw err
-    }
-)
+//loadScenarios ('scenarios/',
+    //function (err) {
+    //throw err
+    //}
+//)
 //Lines 36-53: THIS RUNS BACKSTOP, But only selects 3 scenarios, it is reading each file as a scenario
 //Error thrown TypeError: Cannot read property 'replace' of undefined
 //     at Object.makeSafe (C:\Users\Jessica\AppData\Roaming\npm\node_modules\backstopjs\core\util\engineTools.js:48:14)
@@ -60,6 +60,34 @@ loadScenarios ('scenarios/',
 
 //TODO: Backstop is reading each file as a scenario, try iterating through the "scenarios" objects, multiple?
 //TODO: Can several json files declare the same object?
+
+async function loadScenarios(){
+    const requestURL = "./scenarios/*";
+    const request = new Request(requestURL);
+
+    const response= await fetch(request);
+    const fetchScenarios = await response.json();
+
+    const allScenarios = JSON.parse(fetchScenarios);
+    for (const scenario of scenarios){
+        const allScenarios = `{"scenarios":
+                            {
+                              "label"
+                              "url"
+                              "delay"
+                              "postInteractionWait"
+                              "selectors"
+                              "selectorExpansion"
+                              "misMatchThreshold"
+                              "requireSameDimensions"
+                            }
+                            }`
+                            };
+
+                            console.log(JSON.parse(scenarios));
+}
+
+loadScenarios();
 
 module.exports = {
     "id": "Scaled_Backstop",
@@ -72,7 +100,7 @@ module.exports = {
     ],
     "onBeforeScript": "puppet/onBefore.js",
     "onReadyScript": "puppet/onReady.js",
-    "scenarios": allScenarios,
+    "scenarios": loadScenarios(),
     "paths": {
         "bitmaps_reference": "backstop_data/bitmaps_reference",
         "bitmaps_test": "backstop_data/bitmaps_test",
